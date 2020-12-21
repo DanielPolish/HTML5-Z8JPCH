@@ -55,8 +55,8 @@ function SortGames() {
 //		})
 //	} else if (sortBy == "state") {
 //		games.sort(function (g1, g2) {
-//			var g1State = g1.playerNum == 0 ? "Idol" : "Active";
-//			var g2State = g2.playerNum == 0 ? "Idol" : "Active";
+//			var g1State = g1.playerNum == 0 ? "Idle" : "Active";
+//			var g2State = g2.playerNum == 0 ? "Idle" : "Active";
 //			if (g1State == g2State) {
 //				return 0
 //			} else {
@@ -100,8 +100,8 @@ function CmpGames2(g1, g2, sortBy, desc) {
 		else 
 			return CmpGames2(g1, g2, "ver", desc)
 	} else if (sortBy == "state") {
-			var g1State = g1.playerNum == 0 ? "Idol" : "Active";
-			var g2State = g2.playerNum == 0 ? "Idol" : "Active";
+			var g1State = g1.playerNum == 0 ? "Idle" : "Active";
+			var g2State = g2.playerNum == 0 ? "Idle" : "Active";
 			if (g1State == g2State) {
 				return CmpGames2(g1, g2, "ver", desc)
 			} else {
@@ -148,7 +148,7 @@ function DisplayGames(games) {
 			
 			var state = document.createElement("div");
 			state.setAttribute("class", "col");
-			state.innerHTML = game.playerNum == 0 ? "Idol" : "Active";
+			state.innerHTML = game.playerNum == 0 ? "Idle" : "Active";
 			state.style.color = game.playerNum == 0 ? "red" : "green";
 			state.style.fontWeight = game.playerNum == 0 ? "normal" : "bold";
 			
